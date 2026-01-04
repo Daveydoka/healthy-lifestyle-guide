@@ -207,26 +207,55 @@
 
   <!-- HEALTHY EATING -->
   <div id="eating" class="hidden">
-    <div class="card">
-      <h3>Balanced Eating</h3>
-      <ul>
-        <li>Include protein, carbohydrates, and fats</li>
-        <li>Add fruit or vegetables when possible</li>
-        <li>Consistency matters more than perfection</li>
-      </ul>
-      <strong>Try today:</strong> Add one colour to your plate.
-    </div>
 
-    <div class="card">
-      <h3>Hydration Basics</h3>
-      <ul>
-        <li>Drink regularly throughout the day</li>
-        <li>Water is a good default choice</li>
-        <li>Needs vary day to day</li>
-      </ul>
-      <strong>Try today:</strong> Keep a water bottle nearby.
+  <div class="card">
+    <p>
+      This section gives bite-size tips to help make healthy eating easy and realistic.
+      Filter ideas to match your routine.
+    </p>
+  </div>
+
+  <!-- FILTER BUTTONS -->
+  <div class="card">
+    <strong>Filter tips:</strong>
+    <div style="margin-top: 0.5rem;">
+      <button onclick="filterEating('all')">All</button>
+      <button onclick="filterEating('quick')">Quick Tips</button>
+      <button onclick="filterEating('home')">At Home</button>
+      <button onclick="filterEating('out')">On the Go</button>
     </div>
   </div>
+
+  <!-- TIPS -->
+  <div class="card idea-eating" data-category="quick">
+    <h3>Add One Color</h3>
+    <ul>
+      <li>Add one fruit or vegetable per meal</li>
+      <li>Easy way to increase variety</li>
+    </ul>
+    <strong>Try today:</strong> Add one colorful veggie to lunch.
+  </div>
+
+  <div class="card idea-eating" data-category="home">
+    <h3>Plan Simple Meals</h3>
+    <ul>
+      <li>Use pantry staples</li>
+      <li>Batch cook for convenience</li>
+    </ul>
+    <strong>Try today:</strong> Prepare one simple dinner in advance.
+  </div>
+
+  <div class="card idea-eating" data-category="out">
+    <h3>Choose Water First</h3>
+    <ul>
+      <li>Swap sugary drinks for water</li>
+      <li>Works when eating out or on the go</li>
+    </ul>
+    <strong>Try today:</strong> Have water with your next meal.
+  </div>
+
+</div>
+
 
   <!-- FITNESS & ACTIVITY -->
   <div id="fitness" class="hidden">
