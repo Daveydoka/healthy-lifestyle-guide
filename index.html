@@ -323,26 +323,56 @@
 
   <!-- LIFESTYLE -->
   <div id="lifestyle" class="hidden">
-    <div class="card">
-      <h3>Sleep Routine</h3>
-      <ul>
-        <li>Go to bed at similar times</li>
-        <li>Keep your room dark and cool</li>
-        <li>Wind down before sleep</li>
-      </ul>
-      <strong>Try today:</strong> Put your phone away 30 minutes earlier.
-    </div>
 
-    <div class="card">
-      <h3>Building Habits</h3>
-      <ul>
-        <li>Start small</li>
-        <li>Link habits to daily routines</li>
-        <li>Progress over perfection</li>
-      </ul>
-      <strong>Try today:</strong> Choose one small habit to repeat this week.
+  <div class="card">
+    <p>
+      This section offers simple tips to improve daily routines, sleep, and mindset.
+      Filter ideas to focus on what matters most.
+    </p>
+  </div>
+
+  <!-- FILTER BUTTONS -->
+  <div class="card">
+    <strong>Filter tips:</strong>
+    <div style="margin-top: 0.5rem;">
+      <button onclick="filterLifestyle('all')">All</button>
+      <button onclick="filterLifestyle('sleep')">Sleep & Rest</button>
+      <button onclick="filterLifestyle('habits')">Habits</button>
+      <button onclick="filterLifestyle('mind')">Mind & Focus</button>
     </div>
   </div>
+
+  <!-- TIPS -->
+  <div class="card idea-lifestyle" data-category="sleep">
+    <h3>Sleep Routine</h3>
+    <ul>
+      <li>Go to bed at similar times</li>
+      <li>Keep room dark and cool</li>
+      <li>Wind down before sleep</li>
+    </ul>
+    <strong>Try today:</strong> Put your phone away 30 minutes before bed.
+  </div>
+
+  <div class="card idea-lifestyle" data-category="habits">
+    <h3>Start Small</h3>
+    <ul>
+      <li>Pick one small habit to focus on</li>
+      <li>Link it to an existing routine</li>
+    </ul>
+    <strong>Try today:</strong> Add one 5-minute habit to your morning.
+  </div>
+
+  <div class="card idea-lifestyle" data-category="mind">
+    <h3>Mini Mind Breaks</h3>
+    <ul>
+      <li>Take 1–2 minutes to breathe or stretch</li>
+      <li>Helps focus and reduces stress</li>
+    </ul>
+    <strong>Try today:</strong> Pause once today for a mindful breath.
+  </div>
+
+</div>
+
 
 </div>
 
@@ -395,6 +425,31 @@
     }
   });
 }
+
+function filterEating(category) {
+  const tips = document.querySelectorAll('.idea-eating');
+
+  tips.forEach(tip => {
+    if (category === 'all' || tip.dataset.category === category) {
+      tip.style.display = 'block';
+    } else {
+      tip.style.display = 'none';
+    }
+  });
+}
+
+function filterLifestyle(category) {
+  const tips = document.querySelectorAll('.idea-lifestyle');
+
+  tips.forEach(tip => {
+    if (category === 'all' || tip.dataset.category === category) {
+      tip.style.display = 'block';
+    } else {
+      tip.style.display = 'none';
+    }
+  });
+}
+
 
 </script>
 
